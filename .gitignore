@@ -6,4 +6,8 @@ census_data.txt
 
 census_header.txt
 
+census-income.test
+
+ss13pusb.csv
+
 *.pyc

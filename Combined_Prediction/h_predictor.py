@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.cross_validation import train_test_split
 from sklearn.linear_model import LinearRegression
 
-class predictor:
+class h_predictor:
     def __init__(self):
         # matrix containing the data
         self.matrix = []

@@ -13,7 +13,7 @@ from sklearn.metrics import accuracy_score
 from sklearn import neighbors
 import time
 
-class prediction_engine:
+class z_predictor:
     def combined_predict(self):#provide input matrix for combined prediction
         #take only attribute columns that are needed
         f=open('census-income.data','r')

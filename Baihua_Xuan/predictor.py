@@ -185,6 +185,7 @@ if __name__ == '__main__':
     ts_sam3 = table.iloc[1000000:2000000].sample(30000)
 
     # Testing samples for dec_tree
+    # Training sample is the first 2000000 rows of the whole table
     ts_sam1_w = mPredictor.getWhole().iloc[2000000:].sample(300000)
     ts_sam2_w = mPredictor.getWhole().iloc[2000000:].sample(300000)
     ts_sam3_w = mPredictor.getWhole().iloc[2000000:].sample(300000)
@@ -224,7 +225,7 @@ if __name__ == '__main__':
     ts_f1_w = numpy.array(ts_f1_w)
     ts_f2_w = numpy.array(ts_f2_w)
     ts_f3_w = numpy.array(ts_f3_w)
-
+    
     print 'Training and testing features and labels are ready. Initializing svm classifier'
 
     # Initialize the SVM classifier
@@ -254,15 +255,14 @@ if __name__ == '__main__':
 
     print 'Evaluating test sample 3 (svm)'
     mPredictor.evaluate(ts_lab3, svm_res3)
-
-
+    
     print '---------------------------------------------------\n'
 
     print 'Now switching to using decision tree as the classfier'
 
     print 'Initialzing decision tree classifier' 
 
-    dec_tree = tree.DecisionTreeClassifier()
+    dec_tree = tree.DecisionTreeClassifier(min_samples_split = 1000, min_samples_leaf = 100)
 
     print 'Training in process... (decision tree)'
 

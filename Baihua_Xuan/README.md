@@ -7,4 +7,4 @@ TODOs:
    - Decision Tree (DONE)
 4. Use AUC to gauge accuracy (DONE)
 5. Better formatted and commented code (DONE)
-6. Write up report (TODO)
+6. Write up report (DONE)

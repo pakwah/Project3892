@@ -2,12 +2,13 @@ import numpy
 import scipy
 import sklearn
 import pandas
+import os
 from sklearn import svm
 from sklearn import tree
 from sklearn.metrics import recall_score
 from sklearn.metrics import precision_score
-from sklearn.metrics import roc_auc_score
-    
+from sklearn.metrics import roc_auc_score    
+
 # Class predictor
 # Used to analyze and perform machine learning tasks on the 1990 census data
 # obtained from the UCI Machine Learning Repository
@@ -17,6 +18,11 @@ class predictor:
     # Constructor
     def __init__(self, data_src, header_src):
         
+        print 'Getting data from HDFS'
+
+        os.system('hadoop fs -get /user/xuanb/' + header_src + ' ' + header_src)
+        os.system('hadoop fs -get /user/xuanb/' + data_src + ' ' + data_src)
+
         # Read in the parsed header file and construct a pandas table
         with open(header_src, 'r') as myfile:
             data = myfile.read()

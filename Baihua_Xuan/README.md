@@ -10,4 +10,6 @@ TODOs:
 6. Write up report (DONE)
 
 To Run:
---python predictor.py
+```python
+python predictor.py
+```

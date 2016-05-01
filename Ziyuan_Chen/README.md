@@ -24,10 +24,10 @@ The combined_predict() function is used to return the input matrix (50000-by-6) 
 	3. x,y=p.combined_predict, where x is the matrix of features and y is a 1-D array containing the income
 
 To run:
-'''
+```
 python predictor.py
-'''
+```
 To use it in other scripts:
-'''
+```
 from predictor import prediction_engine as xxx
-'''
+```

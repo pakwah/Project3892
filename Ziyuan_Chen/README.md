@@ -1,5 +1,6 @@
 #Income Predictor using 1994 and 1995 Census Data Compiled by UCI Machine Learning Lab
-Data source: http://archive.ics.uci.edu/ml/datasets/Census-Income+(KDD)
+Data source: http://archive.ics.uci.edu/ml/datasets/Census-Income+(KDD) <br />
+Data source is also stored in HDFS under my home directory (chenz16)/final_project_data/
 
 This predictor uses seven features from the datasource to predict a person's income level.
 
